@@ -12,7 +12,7 @@ describe('searchProducts', () => {
     expect(searchProducts(products, 'Настольная лампа').map((product) => product.id)).toEqual([4])
   });
   test("'javascript' возвращает товар с ID 3", () => {
-    expect(searchProducts(products, 'Настольная лампа').map((product) => product.id)).toEqual([4])
+    expect(searchProducts(products, 'javascript').map((product) => product.id)).toEqual([3])
   });
   test("'ЧЕХОЛ' возвращает товар с ID 5", () => {
     expect(searchProducts(products, 'ЧЕХОЛ').map((product) => product.id)).toEqual([5])
