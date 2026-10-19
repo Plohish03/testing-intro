@@ -6,7 +6,9 @@ function notImplemented() {
 
 function addToCart() { return notImplemented(); }
 function changeQuantity() { return notImplemented(); }
-function removeFromCart() { return notImplemented(); }
+function removeFromCart(cart, id) {
+  return cart.filter( n => n.id !== id);
+}
 function calculateCartSubtotal(cart) {
   let total = 0;
   for(const item of cart){
