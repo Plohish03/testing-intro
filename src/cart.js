@@ -1,3 +1,5 @@
+const products = require("./data/products");
+
 function notImplemented() {
   throw new Error('Корзина ещё не реализована. Сначала прочитайте тесты.');
 }
@@ -5,7 +7,14 @@ function notImplemented() {
 function addToCart() { return notImplemented(); }
 function changeQuantity() { return notImplemented(); }
 function removeFromCart() { return notImplemented(); }
-function calculateCartSubtotal() { return notImplemented(); }
+function calculateCartSubtotal(cart) {
+  let total = 0;
+  for(const item of cart){
+    total += item.price * item.quantity;
+  }
+  return total;
+
+}
 function calculateOrderTotal() { return notImplemented(); }
 
 const cartApi = { addToCart, changeQuantity, removeFromCart, calculateCartSubtotal, calculateOrderTotal };
